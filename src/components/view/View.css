@@ -1,0 +1,46 @@
+.excel{
+	width: 2000px;
+
+}
+.tag p{
+
+	font-size: 10px;
+}
+.captura{
+	width: 250px;
+	position:relative;
+
+}
+.btn{
+	background-color: #9CCC65;
+	padding:1% 2%;
+	border:transparent;
+	border-radius: 5px;
+	color:white;
+	cursor: pointer;
+
+    position: absolute;
+    top:90%;
+    right:90%;
+    position: fixed;
+}
+form{
+	
+}
+select{
+	margin-right: 10px;
+}
+input{
+	border-radius: 3px;
+	border:1px solid #ccc;
+	margin-right: 5px;
+}
+.mes{
+	margin-left: 5px;
+}
+.formulario span{
+	font-size: 13px;
+}
+.resumen{
+	margin-top: 50px;
+}
