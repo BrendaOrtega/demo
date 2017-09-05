@@ -1,17 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Routes from './Routes';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {AppBar} from 'material-ui';
+import Nav from './components/nav/Nav';
+
+
+
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Routes />
+      <div>
+        <AppBar
+            title="Flujo de Efectivo"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+        />
+        <Nav/>
+
+          <div style={styles.container}>
+              <Routes />
+          </div>
+
       </div>
     );
   }
 }
+
+const styles = {
+    container:{
+        marginLeft:'300px',
+        marginRight:'100px',
+        marginTop:'70px'
+    }
+};
+
 
 export default App;
