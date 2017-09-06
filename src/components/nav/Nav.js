@@ -70,7 +70,7 @@ class Nav extends Component {
                     }}
                     //isActive={()=>this.oddEvent(1)}
                     exact
-                    to="/">
+                    to="/resumen">
                     <MenuItem
                         style={active?styles.active:null}
                         primaryText="Resumen"
