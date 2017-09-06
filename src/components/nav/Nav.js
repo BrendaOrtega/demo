@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {Drawer, MenuItem} from 'material-ui';
 import NoteAdd from 'material-ui/svg-icons/action/note-add';
-import Resumen from 'material-ui/svg-icons/av/playlist-add-check';
+import Resumen from 'material-ui/svg-icons/editor/insert-chart';
 import System from 'material-ui/svg-icons/action/system-update-alt';
 import Cart from 'material-ui/svg-icons/action/add-shopping-cart';
+import Invent from 'material-ui/svg-icons/editor/format-list-numbered';
 import {NavLink} from 'react-router-dom';
 
 
@@ -75,6 +76,20 @@ class Nav extends Component {
                         style={active?styles.active:null}
                         primaryText="Resumen"
                         leftIcon={<Resumen />} />
+                </NavLink>
+
+                <NavLink
+                    activeClassName="selected"
+                    activeStyle={{
+                        fontWeight: 'bold',
+                    }}
+                    //isActive={()=>this.oddEvent(1)}
+                    exact
+                    to="/inventario">
+                    <MenuItem
+                        style={active?styles.active:null}
+                        primaryText="Inventario"
+                        leftIcon={<Invent />} />
                 </NavLink>
             </Drawer>
         );
