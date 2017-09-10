@@ -8,7 +8,11 @@ import registerServiceWorker from './registerServiceWorker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import 'antd/dist/antd.css';
+import configureStore from './store/configureStore';
+import {Provider} from 'react-redux';
 
+
+const store = configureStore();
 
 const Main = () => (
     <MuiThemeProvider >
@@ -22,8 +26,15 @@ const WithRouter = () => (
     </BrowserRouter>
 );
 
+const ReduxProvider = () => (
+    <Provider store={store}>
+        <WithRouter/>
+    </Provider>
+);
 
-ReactDOM.render(<WithRouter />, document.getElementById('root'));
+
+
+ReactDOM.render(<ReduxProvider />, document.getElementById('root'));
 
 registerServiceWorker();
 
