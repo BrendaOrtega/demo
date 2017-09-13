@@ -1,9 +1,11 @@
 import {combineReducers} from 'redux';
 import ingresos from './ingresoReducer';
+import tipos from './tipoReducer';
 
 
 const rootReducer = combineReducers({
-   ingresos
+   ingresos,
+    tipos
 });
 
 export default rootReducer;

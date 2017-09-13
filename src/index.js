@@ -10,9 +10,15 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import 'antd/dist/antd.css';
 import configureStore from './store/configureStore';
 import {Provider} from 'react-redux';
+import {loadIngresos} from './actions/ingresoActions'
+import {loadTipos} from './actions/tipoActions'
+
 
 
 const store = configureStore();
+store.dispatch(loadIngresos());
+store.dispatch(loadTipos());
+
 
 const Main = () => (
     <MuiThemeProvider >
